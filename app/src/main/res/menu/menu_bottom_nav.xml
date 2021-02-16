@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/nav_breaking"
+        android:id="@+id/worldNewsFragment"
         android:icon="@drawable/ic_world"
         android:title="@string/breaking" />
 
     <item
-        android:id="@+id/nav_search"
+        android:id="@+id/searchNewsFragment"
         android:icon="@drawable/ic_search"
         android:title="@string/search" />
 
     <item
-        android:id="@+id/nav_bookmarks"
+        android:id="@+id/bookmarksFragment"
         android:icon="@drawable/ic_bookmarks"
         android:title="@string/bookmarks" />
 

@@ -115,10 +115,6 @@ class WorldNewsFragment : Fragment(R.layout.fragment_world_news),
         viewModel.onStart()
     }
 
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.menu_breaking_news, menu)
-    }
-
     override fun onOptionsItemSelected(item: MenuItem) =
         when (item.itemId) {
             R.id.action_refresh -> {

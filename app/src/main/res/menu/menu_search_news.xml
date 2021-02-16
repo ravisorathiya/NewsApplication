@@ -9,7 +9,6 @@
         app:actionViewClass="androidx.appcompat.widget.SearchView"
         app:showAsAction="always|collapseActionView" />
     <!--always because of disappear bug-->
-
     <item
         android:id="@+id/action_refresh"
         android:title="@string/refresh"

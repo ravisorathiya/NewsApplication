@@ -187,26 +187,26 @@ class SearchNewsFragment : Fragment(R.layout.fragment_search_news),
         setHasOptionsMenu(true)
     }
 
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.menu_search_news, menu)
-
-        val searchItem = menu.findItem(R.id.action_search)
-        val searchView = searchItem?.actionView as SearchView
-
-        searchView.onQueryTextSubmit { query ->
-            viewModel.onSearchQuerySubmit(query)
-            searchView.clearFocus()
-        }
-    }
-
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
+
+            R.id.action_search -> {
+
+                val searchView = item.actionView as SearchView
+                searchView.onQueryTextSubmit { query ->
+                    viewModel.onSearchQuerySubmit(query)
+                    searchView.clearFocus()
+
+                }
+                true
+            }
             R.id.action_refresh -> {
                 // clicking retry on the footer after this failed causes it to retry refresh. I reported
                 // this to dlam and he said they will probably provide an argument in the future
                 newsArticleAdapter.refresh()
                 true
             }
+
             else -> super.onOptionsItemSelected(item)
         }
     }

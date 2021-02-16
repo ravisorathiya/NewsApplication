@@ -70,10 +70,6 @@ class BookmarksFragment : Fragment(R.layout.fragment_bookmarks),
         setHasOptionsMenu(true)
     }
 
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.menu_bookmarks, menu)
-    }
-
     override fun onOptionsItemSelected(item: MenuItem) =
         when (item.itemId) {
             R.id.action_delete_all_bookmarks -> {
